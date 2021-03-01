@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="progressBarStyle">@drawable/custom_gradient</item>
     </style>
+
+    <style name="Theme.QuizApp.ProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <!--        <item name="android:indeterminateDrawable">@drawable/custom_gradient</item>-->
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_gradient</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <!--            android:scaleY="1.5"-->
+        <!--            android:layout_marginVertical="15dp"-->
+    </style>
+
 </resources>
