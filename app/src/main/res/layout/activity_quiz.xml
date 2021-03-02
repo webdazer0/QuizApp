@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_app"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingBottom="30dp"
+    android:weightSum="3"
+    tools:context=".QuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Skip"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- ProgressBar START  -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/custom_progress_bar"
+            style="@style/Theme.QuizApp.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/p_defaultx125" />
+
+        <TextView
+            android:id="@+id/txtProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/p_defaultx50"
+            android:text="60 sec"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_anchor="@id/custom_progress_bar"
+            app:layout_anchorGravity="center|start" />
+
+        <TextView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="@dimen/p_defaultx50"
+            android:background="@drawable/ic_clock"
+            app:layout_anchor="@id/custom_progress_bar"
+            app:layout_anchorGravity="center|end" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- ProgressBar END  -->
+
+    <!-- Number Question START  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question "
+            android:textColor="@color/graykish"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/numberQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/graykish"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/10"
+            android:textColor="@color/graykish"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+    <!-- Number Question END  -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/p_defaultx25"
+        android:layout_marginBottom="@dimen/p_defaultx100"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Quiz START  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_bg_white"
+        android:orientation="vertical"
+        android:padding="@dimen/p_defaultx100">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_question" />
+
+        <!-- Select answer START  -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/p_defaultx150">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/p_defaultx50"
+                android:text="Harry Potter" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/p_defaultx50"
+                android:text="Giuseppe Conte" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/p_defaultx50"
+                android:text="James Gosling"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tua madre"
+
+                />
+
+        </RadioGroup>
+        <!-- Select answer END  -->
+
+    </LinearLayout>
+
+</LinearLayout>

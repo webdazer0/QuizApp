@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="p_defaultx150">30dp</dimen>
+    <dimen name="p_defaultx125">25dp</dimen>
+    <dimen name="p_defaultx100">20dp</dimen>
+    <dimen name="p_defaultx75">15dp</dimen>
+    <dimen name="p_defaultx50">10dp</dimen>
+    <dimen name="p_defaultx25">5dp</dimen>
+</resources>

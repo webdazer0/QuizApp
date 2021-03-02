@@ -4,23 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_background_app"
     android:orientation="vertical"
+    android:paddingHorizontal="@dimen/p_defaultx100"
+    android:weightSum="3"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtProgress"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content"
-        android:text="0"
-        />
+    <!--    android:background="@drawable/ic_background_app"-->
 
-    <!-- Linear progress indicator -->
-    <ProgressBar
-        android:id="@+id/custom_progress_bar"
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_weight="1"
+       android:gravity="bottom"
+       >
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Let's Play Quiz,"
+           android:textStyle="bold"
+           android:textColor="#E7EAED"
+           android:textSize="32sp" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Enter your informations bellow"
+           android:textSize="12sp"
+           android:textColor="@color/white" />
+
+   </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Theme.QuizApp.ProgressBar"
-        />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/main_user"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="#1C2341"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeColor="#FFF"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_button"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
 
 </LinearLayout>
